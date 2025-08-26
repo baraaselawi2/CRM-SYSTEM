@@ -1,0 +1,39 @@
+﻿using CRM__Project.Clasess;
+using CRM__Project.Service;
+
+
+while (true)
+{
+    Console.WriteLine("Choose Service: \n 1. Customer Service \n 2. Lead Service \n 3. Opportunity Service \n 4. Notes \n 5. Activity \n 6. Report \n 7. Exit \n ===================================================================");
+    int choice = int.Parse(Console.ReadLine() ?? string.Empty);
+    if (choice == 7)
+    {
+        break;
+    }
+    switch (choice)
+    {
+
+        case 1:
+            new CoustomerService().ShowMainMenu();
+            break;
+        case 2:
+           new LeadService().ShowMainMenu();
+            break;
+        case 3:
+           new OpportunityService().ShowMainMenu();
+            break;
+        case 4:
+           new NoteSercive().ShowMainMenu();
+            break;
+        case 5:
+           new ActivityService().ShowMainMenu();
+            break;
+        case 6:
+           new Reports().ShowMainMenu();
+            break;
+
+            Console.WriteLine("Invalid choice Please try again");
+            break;
+    }
+}
+
